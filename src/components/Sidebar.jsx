@@ -1,4 +1,4 @@
-import { StyledNav, StyledSideBar, StyledSideBarIcon } from "../styles/StyledSideBar.style"
+import { StyledInnerWrapper, StyledNav, StyledSideBar, StyledSideBarIcon } from "../styles/StyledSideBar.style"
 import { BiHomeAlt, BiLayer } from "react-icons/bi"
 import { BsFlag } from "react-icons/bs"
 import { FiBarChart2, FiCheckSquare, FiLifeBuoy, FiUsers } from "react-icons/fi"
@@ -12,18 +12,17 @@ const Sidebar = () => {
 
       <StyledNav>
         <Logo />
-        <div className="nav-inner-wrapper">
-          <div className="nav-header">
-            <ul>
-              <SideBarIcon icon={<BiHomeAlt />} />
-              <SideBarIcon icon={<FiBarChart2 />} />
-              <SideBarIcon icon={<BiLayer />} />
-              <SideBarIcon icon={<FiCheckSquare />} />
-              <SideBarIcon icon={<BsFlag />} />
-              <SideBarIcon icon={<FiUsers />} />
-            </ul>
 
-          </div>
+        <StyledInnerWrapper>
+          <ul className="nav-header">
+            <SideBarIcon icon={<BiHomeAlt />} />
+            <SideBarIcon icon={<FiBarChart2 />} />
+            <SideBarIcon icon={<BiLayer />} />
+            <SideBarIcon icon={<FiCheckSquare />} />
+            <SideBarIcon icon={<BsFlag />} />
+            <SideBarIcon icon={<FiUsers />} />
+          </ul>
+
           <div className="nav-footer">
             <ul>
               <SideBarIcon icon={<FiLifeBuoy />} />
@@ -31,10 +30,8 @@ const Sidebar = () => {
             </ul>
 
             <img src="/assets/girl-avatar.png" alt="Profile" />
-
           </div>
-        </div>
-
+        </StyledInnerWrapper>
       </StyledNav>
 
       <div>

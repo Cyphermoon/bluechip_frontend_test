@@ -104,9 +104,13 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     html{
-        font-size: 16px;
+        font-size: 15px;
         font-family: 'Inter', sans-serif;
         line-height:1.5;
+
+        @media screen and (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
+            font-size: 23px;
+        }
     }
 `;
 
