@@ -5,6 +5,7 @@ export const StyledSideBar = styled.section`
     width: 90%;
     display:flex;
     height: 100vh;
+
 `
 
 
@@ -33,19 +34,35 @@ export const StyledInnerWrapper = styled.div`
         text-align: center;
         flex-grow: 1;
 
+      
+    
+
         .nav-footer > img{
             border-top: 2px solid ${({ theme }) => theme.colors.primary_600};
             padding-top: 1.75rem;
+            cursor:pointer;
+
+            :hover{
+                opacity:.85;
+            }
         }
 
         .nav-header > * + *,
         .nav-footer > ul > * + *,
         .nav-footer > * + *{
             margin-top: ${({ theme }) => theme.spacing.lg};
+
         }
 `
 
 
 export const StyledSideBarIcon = styled.li`
+    cursor: pointer;
+    transition: all 400ms ease-out;
 
+    :hover{
+        background-color: ${({ theme }) => theme.colors.primary_600};
+        padding: ${({ theme }) => theme.spacing.xs} ${({ theme }) => theme.spacing.sm};
+        border-radius: ${({ theme }) => theme.radius.sm};
+    }
 `
