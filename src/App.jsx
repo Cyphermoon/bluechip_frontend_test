@@ -1,8 +1,9 @@
+import Sidebar from "./components/Sidebar";
 
 function App() {
   return (
     <div className="App">
-      <h1>This is an inter font</h1>
+      <Sidebar />
     </div>
   );
 }
