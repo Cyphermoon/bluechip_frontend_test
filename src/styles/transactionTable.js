@@ -1,11 +1,29 @@
 import styled from "styled-components";
 
 export const StyledTransactionTable = styled.table`
+    width:100%;
+    border:1px solid ${({ theme }) => theme.colors.gray_200};
+    border-radius:${({ theme }) => theme.radius.sm};
+    padding:${({ theme }) => theme.spacing.sm} ${({ theme }) => theme.spacing.lg};
+    text-align:left;
 
+    th{
+        font-size:${({ theme }) => theme.typeScale.text_xs};
+        font-weight:500;
+        color:${({ theme }) => theme.colors.gray_500};
+    }
+
+    td,th{
+        padding:${({ theme }) => theme.spacing.lg} 0;
+        border-bottom:1px solid ${({ theme }) => theme.colors.gray_200};
+    }
+
+    td:first-child{
+        min-width:200px;
+    }
 `
 
 export const StyledTableHeader = styled.thead`
-
     td{
         font-size:${({ theme }) => theme.typeScale.text_xs};
         color:${({ theme }) => theme.colors.gray_500};
@@ -86,8 +104,10 @@ export const StyledStatusTag = styled.div`
 export const StyledExecutorProfile = styled.div`
     display:inline-flex;
     align-items:center;
+    justify-content:space-between;
     font-size:${({ theme }) => theme.typeScale.text_sm};
     font-weight:500;
+    min-width:275px;
 
     p{
       color:${({ theme }) => theme.colors.gray_900};
@@ -96,6 +116,7 @@ export const StyledExecutorProfile = styled.div`
     figure{
         width:32px;
         height:32px;
+        margin-right:${({ theme }) => theme.spacing.md};
 
         img{
             width:100%;

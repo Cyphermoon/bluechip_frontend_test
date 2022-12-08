@@ -12,11 +12,11 @@ const TransactionTable = () => {
         <StyledTransactionTable>
             <StyledTableHeader>
                 <tr>
-                    <td><CheckBox />Trade</td>
-                    <td>Order Amount</td>
-                    <td>Delivery date <BsArrowDown /> </td>
-                    <td>Status</td>
-                    <td>Executed By</td>
+                    <th><CheckBox />Trade</th>
+                    <th>Order Amount</th>
+                    <th>Delivery date <BsArrowDown /> </th>
+                    <th>Status</th>
+                    <th>Executed By</th>
                 </tr>
             </StyledTableHeader>
 
@@ -86,8 +86,8 @@ const ExecutorProfile = ({ image_url, name, email }) => {
         <StyledExecutorProfile>
             <Flex align="center" justify="flex-start">
                 <figure>
-                    {/* {image_url && <img src={image_url} alt="user profile" />} */}
-                    {image_url && <UserDefaultProfile name={name} />}
+                    {image_url && <img src={image_url} alt="user profile" />}
+                    {!image_url && <UserDefaultProfile name={name} />}
                 </figure>
                 <div>
                     <p>{name}</p>
