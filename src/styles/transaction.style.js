@@ -24,7 +24,6 @@ export const StyledFilter = styled.div`
           margin-top:${({ theme }) => theme.spacing.md};
     }
   
-
     .filter-options{
         & > * + *{
            margin-left:${({ theme }) => theme.spacing.md};
@@ -97,7 +96,6 @@ export const StyledTransactionFooter = styled.footer`
         }
     }
 
-
 `
 
 export const StyledSearchBar = styled.form`
@@ -149,13 +147,16 @@ export const StyledPageNumbers = styled.div`
         color:${({ theme }) => theme.colors.gray_500};
         padding:${({ theme }) => theme.spacing.md};
         cursor:pointer;
+        transition: all 300ms linear;
 
-        &.active{
+        &.active,
+        &:hover{
             color:${({ theme }) => theme.colors.primary_600};
             background-color:${({ theme }) => theme.colors.primary_50};
             border-radius:${({ theme }) => theme.radius.sm};
             padding:${({ theme }) => theme.spacing.md} ${({ theme }) => theme.spacing.xl};
         }
+
     }
 
     @media screen and (max-width:${({ theme }) => theme.breakpoints.tablet}){

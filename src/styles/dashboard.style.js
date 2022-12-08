@@ -24,9 +24,14 @@ export const StyledCard = styled.div`
     border: 1px solid ${({ theme }) => theme.colors.gray_200};
     padding: ${({ theme }) => theme.spacing.xl} ${({ theme }) => theme.spacing.xl};
     box-shadow: 0px 1px 3px rgba(16, 24, 40, 0.1), 0px 1px 2px rgba(16, 24, 40, 0.06);
+    transition: transform 100ms ease-in;
 
     & > * + *{
         margin-top:${({ theme }) => theme.spacing.sm};
+    }
+
+    :hover{
+        transform: translateY(-5%)
     }
 
     ${Flex}{

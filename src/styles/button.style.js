@@ -14,9 +14,11 @@ export const Button = styled.button`
     gap: ${({ theme }) => theme.spacing.sm};
     cursor:pointer;
     box-shadow:0px 1px 2px rgba(16, 24, 40, 0.05);
+    transition: transform 200ms linear;
 
     &:hover{
         opacity: 0.85;
+        transform: scale(1.077);
     }
 
     &.hidden{
