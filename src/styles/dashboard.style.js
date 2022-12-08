@@ -21,4 +21,15 @@ export const StyledHeader = styled.header`
     .button-space > * + *{
         margin-left:${({ theme }) => theme.spacing.md}
     }
+
+    @media screen and (max-width:${({ theme }) => theme.breakpoints.tablet}) {
+        flex-direction: column;
+        h2{
+            margin-bottom: ${({ theme }) => theme.spacing.sm} ;
+        }
+
+        & > * + *{
+            margin-top: ${({ theme }) => theme.spacing.xxl}
+        }
+    }
 `

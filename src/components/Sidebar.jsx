@@ -5,7 +5,7 @@ import { FiBarChart2, FiCheckSquare, FiLifeBuoy, FiLogOut, FiUser, FiUsers } fro
 import { CiSettings } from "react-icons/ci"
 
 //styles
-import { StyledInnerWrapper, StyledNav, StyledSideBar, StyledSideBarIcon } from "../styles/StyledSideBar.style"
+import { StyledInnerWrapper, StyledNav, StyledSideBar, StyledSideBarIcon } from "../styles/sidebar.style"
 import { StyledSubMenu, StyledSubMenuFooter, StyledSubMenuHeader } from "../styles/StyledSubMenu"
 
 import Logo from "./Logo"

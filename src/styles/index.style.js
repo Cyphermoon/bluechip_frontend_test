@@ -118,7 +118,7 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     html{
-        font-size: 15px;
+        font-size: 14px;
         font-family: 'Inter', sans-serif;
         line-height:1.5;
         color: ${theme.colors.gray_500};
