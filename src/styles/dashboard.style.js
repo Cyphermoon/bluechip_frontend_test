@@ -1,8 +1,92 @@
 import styled from "styled-components";
+import { CenterContainer } from "./container.style";
+import { Flex } from "./util.style";
 
 export const StyledDashBoard = styled.main`
     flex-grow: 1;
     padding: ${({ theme }) => theme.spacing.xxl}  0 ;
+
+    ${CenterContainer}{
+         & > * + *{
+            margin-top: ${({ theme }) => theme.spacing.xxxl};
+         }
+    }
+`
+
+
+export const StyledCard = styled.div`
+    border-radius: ${({ theme }) => theme.radius.sm};
+    border: 1px solid ${({ theme }) => theme.colors.gray_200};
+    padding: ${({ theme }) => theme.spacing.xxl};
+    box-shadow: 0px 1px 3px rgba(16, 24, 40, 0.1), 0px 1px 2px rgba(16, 24, 40, 0.06);
+
+    & > * + *{
+        margin-top:${({ theme }) => theme.spacing.lg};
+    }
+
+    ${Flex}{
+        span{
+            font-size: ${({ theme }) => theme.typeScale.text_md};
+            font-weight: 500;
+            color: ${({ theme }) => theme.colors.gray_900};
+        }
+
+        svg{
+            color: ${({ theme }) => theme.colors.gray_400};
+            font-size: ${({ theme }) => theme.typeScale.text_md};
+        }
+    }
+
+    h1{
+        color: ${({ theme }) => theme.colors.gray_900};
+    }
+
+    .card-footer > div{
+        display:flex;
+        align-items:center;
+
+        .percentage-changed{
+            margin-right: ${({ theme }) => theme.spacing.sm};
+
+            svg{
+                margin-right: ${({ theme }) => theme.spacing.xs}
+            }
+        }
+
+        .success{
+            color: ${({ theme }) => theme.colors.success_700};
+
+            svg{
+                color: ${({ theme }) => theme.colors.success_500}
+            }
+        }
+
+        .failure{
+            color: ${({ theme }) => theme.colors.error_700};
+
+            svg{
+                color: ${({ theme }) => theme.colors.error_500}
+            }
+        }
+    }
+
+`
+
+export const StyledCardList = styled.div`
+    display: flex;
+    flex-direction:column;
+    gap:${({ theme }) => theme.spacing.xl};
+
+    @media screen and (min-width:${({ theme }) => theme.breakpoints.tablet}) {
+        flex-direction: row;
+        justify-content: space-between;
+
+        & > * {
+            width:32%;
+        }
+       
+    }
+
 `
 
 export const StyledHeader = styled.header`

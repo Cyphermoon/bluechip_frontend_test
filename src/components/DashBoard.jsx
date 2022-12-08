@@ -7,6 +7,7 @@ import { FiUploadCloud } from 'react-icons/fi'
 import { RiAddFill } from 'react-icons/ri'
 import { theme } from '../styles/index.style'
 import { CenterContainer } from '../styles/container.style'
+import CardList from './CardList'
 
 const DashBoard = () => {
     return (
@@ -30,6 +31,8 @@ const DashBoard = () => {
                     </div>
 
                 </StyledHeader>
+
+                <CardList />
             </CenterContainer>
         </StyledDashBoard>
     )

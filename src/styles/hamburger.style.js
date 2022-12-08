@@ -53,6 +53,6 @@ export const StyledIcon = styled.div`
          
             justify-self:flex-start;
             transform:rotate(-45deg);
-            top:19px;
+            top:15px;
         }
     }`

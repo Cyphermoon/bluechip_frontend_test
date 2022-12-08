@@ -15,6 +15,7 @@ export const theme = {
     success_700: "#027A48",
     gray_200: "#EAECF0",
     gray_300: "#D0D5DD",
+    gray_400: "#98A2B3",
     gray_500: "#667085",
     gray_700: "#344054",
     gray_900: "#101828",
@@ -57,7 +58,8 @@ export const theme = {
     md: '0.75rem',     // 12px
     lg: '	1rem',      // 16px
     xl: '	1.5rem',    // 24px
-    xxl: '1.75rem'  // 28px
+    xxl: '1.75rem',  // 28px
+    xxxl: '2.25rem'       //38px
   }
 };
 
