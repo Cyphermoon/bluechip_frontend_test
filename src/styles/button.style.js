@@ -19,9 +19,20 @@ export const Button = styled.button`
         opacity: 0.85;
     }
 
+    &.hidden{
+        span{
+            display:none;
+        }
+    }
+
     svg{
         font-size: ${({ theme }) => theme.typeScale.text_md}; 
     }
 
+    @media screen and (max-width:${({ theme }) => theme.breakpoints.tablet}){
+        span{
+            display:${({ collapse }) => collapse ? "none" : "inline"}
+        }
+    }
 
 `

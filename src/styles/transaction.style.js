@@ -4,6 +4,13 @@ export const StyledTransaction = styled.section`
     & > * + *{
         margin-top:${({ theme }) => theme.spacing.xxxl};
     }
+
+    .table-container{
+        overflow:scroll;
+        max-width:1700px;
+        width:100%;
+        height:auto;
+    }
 `
 
 export const StyledFilter = styled.div`
@@ -64,6 +71,24 @@ export const StyledTransactionFooter = styled.footer`
     display:flex;
     align-items:center;
     justify-content:space-between;
+
+    .pagination-wrapper{
+        p{
+            display:none;
+            font-size:${({ theme }) => theme.typeScale.text_sm};
+            font-weight:400;
+            color:${({ theme }) => theme.colors.gray_700};
+        }
+
+        @media screen and (max-width:${({ theme }) => theme.breakpoints.tablet}){
+            p{
+                display:inline-block;
+            }
+
+        }
+    }
+
+
 `
 
 export const StyledSearchBar = styled.form`
@@ -124,7 +149,14 @@ export const StyledPageNumbers = styled.div`
         }
     }
 
+    @media screen and (max-width:${({ theme }) => theme.breakpoints.tablet}){
+    
+            display:none;
+
+    }
+
     & > * + *{
         margin-left:${({ theme }) => theme.spacing.md};
     }
+
 `

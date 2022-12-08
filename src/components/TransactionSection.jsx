@@ -30,13 +30,17 @@ const TransactionSection = () => {
                     </StyledFilterOption>
                 </div>
             </StyledFilter>
-            <TransactionTable />
+
+            <div className='table-container'>
+                <TransactionTable />
+            </div>
+
             <StyledTransactionFooter>
-                <Button outline={true}>
+                <Button outline={true} collapse={true}>
                     <BsArrowLeft />
-                    Prev
+                    <span>Prev</span>
                 </Button>
-                <div>
+                <div className='pagination-wrapper'>
                     <StyledPageNumbers>
                         <span className='active'>1</span>
                         <span >2</span>
@@ -46,9 +50,10 @@ const TransactionSection = () => {
                         <span >9</span>
                         <span >10</span>
                     </StyledPageNumbers>
+                    <p>Page 1 of 10</p>
                 </div>
-                <Button outline={true}>
-                    Next
+                <Button outline={true} collapse={true}>
+                    <span>Next</span>
                     <BsArrowRight />
                 </Button>
             </StyledTransactionFooter>

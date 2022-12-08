@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const StyledTransactionTable = styled.table`
-    width:100%;
+    width:1020px;
     border:1px solid ${({ theme }) => theme.colors.gray_200};
     border-radius:${({ theme }) => theme.radius.sm};
     padding:${({ theme }) => theme.spacing.sm} ${({ theme }) => theme.spacing.lg};
