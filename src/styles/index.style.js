@@ -56,6 +56,7 @@ export const theme = {
     md: '0.75rem',     // 12px
     lg: '	1rem',      // 16px
     xl: '	1.5rem',    // 24px
+    xxl: '1.75rem'  // 28px
   }
 };
 
@@ -75,6 +76,12 @@ export const GlobalStyle = createGlobalStyle`
 
     a{
       text-decoration: none;
+    }
+
+    ul{
+        padding:0;
+        margin:0;
+        list-style: none;
     }
 
     /*Typography*/
@@ -109,7 +116,7 @@ export const GlobalStyle = createGlobalStyle`
         line-height:1.5;
 
         @media screen and (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
-            font-size: 23px;
+            font-size: 17px;
         }
     }
 `;

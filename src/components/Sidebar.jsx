@@ -1,10 +1,11 @@
 import { StyledInnerWrapper, StyledNav, StyledSideBar, StyledSideBarIcon } from "../styles/StyledSideBar.style"
-import { BiHomeAlt, BiLayer } from "react-icons/bi"
+import { BiHomeAlt, BiLayer, BiLineChart } from "react-icons/bi"
 import { BsFlag } from "react-icons/bs"
-import { FiBarChart2, FiCheckSquare, FiLifeBuoy, FiUsers } from "react-icons/fi"
+import { FiBarChart2, FiCheckSquare, FiCrosshair, FiLifeBuoy, FiUser, FiUsers } from "react-icons/fi"
 import { CiSettings } from "react-icons/ci"
 
 import Logo from "./Logo"
+import { StyledSubMenu, StyledSubMenuHeader } from "../styles/StyledSubMenu"
 
 const Sidebar = () => {
   return (
@@ -15,7 +16,7 @@ const Sidebar = () => {
 
         <StyledInnerWrapper>
           <ul className="nav-header">
-            <SideBarIcon icon={<BiHomeAlt />} />
+            <SideBarIcon icon={<BiHomeAlt />} active />
             <SideBarIcon icon={<FiBarChart2 />} />
             <SideBarIcon icon={<BiLayer />} />
             <SideBarIcon icon={<FiCheckSquare />} />
@@ -34,17 +35,25 @@ const Sidebar = () => {
         </StyledInnerWrapper>
       </StyledNav>
 
-      <div>
+      <StyledSubMenu>
+        <StyledSubMenuHeader>
+          <p>Dashboard</p>
+          <ul>
+            <SideBarIcon icon={<BiLineChart />} text="overview" active />
+            <SideBarIcon icon={<FiUser />} text="My details" />
+          </ul>
+        </StyledSubMenuHeader>
 
-      </div>
+      </StyledSubMenu>
     </StyledSideBar>
   )
 }
 
-const SideBarIcon = ({ icon }) => {
+const SideBarIcon = ({ icon, text, active }) => {
   return (
-    <StyledSideBarIcon>
+    <StyledSideBarIcon className={`${text && "text-present"} ${active && "active"}`} >
       {icon}
+      {text && <span>{text}</span>}
     </StyledSideBarIcon>
   )
 }
