@@ -6,6 +6,9 @@ export const StyledSideBar = styled.aside`
     display:flex;
     height: 100vh;
 
+    @media screen and (max-width:${({ theme }) => theme.breakpoints.tablet}) {
+            display: none;
+    }
 `
 
 

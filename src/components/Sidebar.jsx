@@ -10,53 +10,58 @@ import { StyledSubMenu, StyledSubMenuFooter, StyledSubMenuHeader } from "../styl
 
 import Logo from "./Logo"
 import { Flex } from "../styles/util.style"
+import MobileNavBar from "./MobileNavBar"
 
 const Sidebar = () => {
   return (
-    <StyledSideBar>
-      <StyledNav>
-        <Logo />
+    <>
+      <MobileNavBar />
+      <StyledSideBar>
+        <StyledNav>
+          <Logo />
 
-        <StyledInnerWrapper>
-          <ul className="nav-header">
-            <SideBarIcon icon={<BiHomeAlt />} active />
-            <SideBarIcon icon={<FiBarChart2 />} />
-            <SideBarIcon icon={<BiLayer />} />
-            <SideBarIcon icon={<FiCheckSquare />} />
-            <SideBarIcon icon={<BsFlag />} />
-            <SideBarIcon icon={<FiUsers />} />
-          </ul>
-
-          <div className="nav-footer">
-            <ul>
-              <SideBarIcon icon={<FiLifeBuoy />} />
-              <SideBarIcon icon={<CiSettings />} />
+          <StyledInnerWrapper>
+            <ul className="nav-header">
+              <SideBarIcon icon={<BiHomeAlt />} active />
+              <SideBarIcon icon={<FiBarChart2 />} />
+              <SideBarIcon icon={<BiLayer />} />
+              <SideBarIcon icon={<FiCheckSquare />} />
+              <SideBarIcon icon={<BsFlag />} />
+              <SideBarIcon icon={<FiUsers />} />
             </ul>
 
-            <img src="/assets/girl-avatar.png" alt="Profile" />
-          </div>
-        </StyledInnerWrapper>
-      </StyledNav>
+            <div className="nav-footer">
+              <ul>
+                <SideBarIcon icon={<FiLifeBuoy />} />
+                <SideBarIcon icon={<CiSettings />} />
+              </ul>
 
-      <StyledSubMenu>
-        <StyledSubMenuHeader>
-          <p>Dashboard</p>
-          <ul>
-            <SideBarIcon icon={<BiLineChart />} text="overview" active />
-            <SideBarIcon icon={<FiUser />} text="My details" />
-          </ul>
-        </StyledSubMenuHeader>
+              <img src="/assets/girl-avatar.png" alt="Profile" />
+            </div>
+          </StyledInnerWrapper>
+        </StyledNav>
 
-        <StyledSubMenuFooter>
-          <Flex align="flex-start">
-            <p>Tofunmi Sojimi</p>
-            <FiLogOut />
-          </Flex>
+        <StyledSubMenu>
+          <StyledSubMenuHeader>
+            <p>Dashboard</p>
+            <ul>
+              <SideBarIcon icon={<BiLineChart />} text="overview" active />
+              <SideBarIcon icon={<FiUser />} text="My details" />
+            </ul>
+          </StyledSubMenuHeader>
 
-          <small>tofunmisojimi@untitledui.com</small>
-        </StyledSubMenuFooter>
-      </StyledSubMenu>
-    </StyledSideBar>
+          <StyledSubMenuFooter>
+            <Flex align="flex-start">
+              <p>Tofunmi Sojimi</p>
+              <FiLogOut />
+            </Flex>
+
+            <small>tofunmisojimi@untitledui.com</small>
+          </StyledSubMenuFooter>
+        </StyledSubMenu>
+      </StyledSideBar>
+    </>
+
   )
 }
 

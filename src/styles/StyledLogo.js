@@ -3,6 +3,9 @@ import styled from "styled-components";
 
 export const StyledLogo = styled.div`
     margin-bottom: ${({ theme }) => theme.spacing.lg};
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
     cursor: pointer;
 
     img:hover{
@@ -10,6 +13,7 @@ export const StyledLogo = styled.div`
     }
 
     h2{
-        display:none;
+        margin-left:${({ theme }) => theme.spacing.sm};
+        font-size: 1.23rem;
     }
 `
