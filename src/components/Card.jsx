@@ -1,5 +1,6 @@
 import React from 'react'
-import { BsArrowDown, BsArrowUp, BsThreeDotsVertical } from 'react-icons/bs'
+import { BiDownArrowAlt, BiUpArrowAlt } from 'react-icons/bi'
+import { BsThreeDotsVertical } from 'react-icons/bs'
 import { StyledCard } from '../styles/dashboard.style'
 import { Flex } from '../styles/util.style'
 
@@ -15,7 +16,7 @@ const Card = ({ card_title, value, percentage_changed, up }) => {
             <div className='card-footer'>
                 <div className='info'>
                     <span className={`percentage-changed ${up ? "success" : "failure"}`}>
-                        {up ? <BsArrowUp /> : <BsArrowDown />}
+                        {up ? <BiDownArrowAlt /> : <BiUpArrowAlt />}
                         {percentage_changed}
                     </span>
 

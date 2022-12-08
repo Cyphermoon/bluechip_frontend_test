@@ -48,13 +48,6 @@ export const theme = {
     xl: '0.875em',    // 14px
   },
 
-  shadows: {
-    button: "0 0 .125rem #3c3c3c",
-    overlay: `0 1rem 1.5rem 0 #223c5028`,
-    card: "0 0 .625rem rgb(0 0 0 / 5%)",
-    dropdown: `0px 1px 2px 0px rgb(60 64 67 / 30%), 0px 2px 6px 2px rgb(60 64 67 / 15%)`,
-    cardx: "0 0.12rem 0.12rem 0.05rem #d6cccc90",
-  },
 
   spacing: {
     xs: '0.25rem',      // 4px
@@ -128,7 +121,7 @@ export const GlobalStyle = createGlobalStyle`
         color: ${theme.colors.gray_500};
 
         @media screen and (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
-            font-size: 15.1px;
+            font-size: 14.8px;
         }
     }
 `;

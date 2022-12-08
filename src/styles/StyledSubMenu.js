@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const StyledSubMenu = styled.div`
     flex-grow:1;
     background-color: ${({ theme }) => theme.colors.primary_800};
-    padding: ${({ theme }) => theme.spacing.xxl} ${({ theme }) => theme.spacing.xl};
+    padding: ${({ theme }) => theme.spacing.xxxl} ${({ theme }) => theme.spacing.xl};
     display: flex;
     flex-direction: column;
     justify-content: space-between;

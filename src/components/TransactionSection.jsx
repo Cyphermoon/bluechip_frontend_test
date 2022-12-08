@@ -3,8 +3,8 @@ import React from 'react'
 import { StyledFilter, StyledFilterOption, StyledPageNumbers, StyledSearchBar, StyledTransaction, StyledTransactionFooter } from '../styles/transaction.style'
 
 //icons
-import { BiCalendar, BiSearch } from 'react-icons/bi'
-import { BsArrowLeft, BsArrowRight, BsFilter } from 'react-icons/bs'
+import { BiCalendar, BiLeftArrowAlt, BiRightArrowAlt, BiSearch } from 'react-icons/bi'
+import { BsFilter } from 'react-icons/bs'
 import TransactionTable from './TransactionTable'
 import { Button } from '../styles/button.style'
 
@@ -37,7 +37,7 @@ const TransactionSection = () => {
 
             <StyledTransactionFooter>
                 <Button outline={true} collapse={true}>
-                    <BsArrowLeft />
+                    <BiLeftArrowAlt />
                     <span>Prev</span>
                 </Button>
                 <div className='pagination-wrapper'>
@@ -54,7 +54,7 @@ const TransactionSection = () => {
                 </div>
                 <Button outline={true} collapse={true}>
                     <span>Next</span>
-                    <BsArrowRight />
+                    <BiRightArrowAlt />
                 </Button>
             </StyledTransactionFooter>
         </StyledTransaction>

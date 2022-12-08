@@ -39,7 +39,7 @@ export const StyledSideBar = styled.aside`
 
 export const StyledNav = styled.nav`
     background-color: ${({ theme }) => theme.colors.primary_700};
-    padding: ${({ theme }) => theme.spacing.xxl} ${({ theme }) => theme.spacing.md};
+    padding: ${({ theme }) => theme.spacing.xxxl} ${({ theme }) => theme.spacing.md};
     display:flex;
     flex-direction: column;
     align-items: center;

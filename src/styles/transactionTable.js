@@ -21,6 +21,12 @@ export const StyledTransactionTable = styled.table`
     td:first-child{
         min-width:200px;
     }
+
+    tr:last-child{
+        td{
+            border-bottom:none;
+        }
+    }
 `
 
 export const StyledTableHeader = styled.thead`
@@ -64,12 +70,12 @@ export const StyledStatusTag = styled.div`
     font-weight:500;
     padding: ${({ theme }) => theme.spacing.sm} ${({ theme }) => theme.spacing.md};
     border-radius: ${({ theme }) => theme.radius.sm};
-    gap:${({ theme }) => theme.spacing.sm};
      
 
     svg{
         width:8px;
         height:8px;
+        margin-right:${({ theme }) => theme.spacing.sm};
     }
 
     &.processing{

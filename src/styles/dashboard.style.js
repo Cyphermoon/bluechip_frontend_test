@@ -4,12 +4,17 @@ import { Flex } from "./util.style";
 
 export const StyledDashBoard = styled.main`
     flex-grow: 1;
-    padding: ${({ theme }) => theme.spacing.xxl}  0 ;
+    padding: ${({ theme }) => theme.spacing.xxxl}  0 ;
 
     ${CenterContainer}{
          & > * + *{
             margin-top: ${({ theme }) => theme.spacing.xxxl};
          }
+    }
+
+    @media screen and (max-width:${({ theme }) => theme.breakpoints.tablet}) {
+        padding: ${({ theme }) => theme.spacing.xxl}  0 ;
+       
     }
 `
 
@@ -17,11 +22,11 @@ export const StyledDashBoard = styled.main`
 export const StyledCard = styled.div`
     border-radius: ${({ theme }) => theme.radius.sm};
     border: 1px solid ${({ theme }) => theme.colors.gray_200};
-    padding: ${({ theme }) => theme.spacing.xl} ${({ theme }) => theme.spacing.lg};;
+    padding: ${({ theme }) => theme.spacing.xl} ${({ theme }) => theme.spacing.xl};
     box-shadow: 0px 1px 3px rgba(16, 24, 40, 0.1), 0px 1px 2px rgba(16, 24, 40, 0.06);
 
     & > * + *{
-        margin-top:${({ theme }) => theme.spacing.md};
+        margin-top:${({ theme }) => theme.spacing.sm};
     }
 
     ${Flex}{
@@ -39,6 +44,7 @@ export const StyledCard = styled.div`
 
     h1{
         color: ${({ theme }) => theme.colors.gray_900};
+        margin-top:${({ theme }) => theme.spacing.xl};
     }
 
     .card-footer{
@@ -124,7 +130,7 @@ export const StyledHeader = styled.header`
         }
 
         & > * + *{
-            margin-top: ${({ theme }) => theme.spacing.xxl}
+            margin-top: ${({ theme }) => theme.spacing.lg}
         }
     }
 `

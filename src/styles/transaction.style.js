@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const StyledTransaction = styled.section`
     & > * + *{
-        margin-top:${({ theme }) => theme.spacing.xxxl};
+        margin-top:${({ theme }) => theme.spacing.xxl};
     }
 
     .table-container{
@@ -19,7 +19,11 @@ export const StyledFilter = styled.div`
     padding:${({ theme }) => theme.spacing.md} ${({ theme }) => theme.spacing.lg};
     display:flex;
     flex-direction:column;
-    gap:${({ theme }) => theme.spacing.md};
+
+    & > * + *{
+          margin-top:${({ theme }) => theme.spacing.md};
+    }
+  
 
     .filter-options{
         & > * + *{
@@ -31,6 +35,11 @@ export const StyledFilter = styled.div`
         justify-content:space-between;
         gap:unset;
         flex-direction:row;
+
+        & > * + *{
+            margin-top:unset;
+      }
+    
 
         span{
             display: inline-block;
