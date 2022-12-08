@@ -35,6 +35,9 @@ export const StyledIcon = styled.div`
     }
 
     &.opened{
+        & > *{
+            background-color:${({ theme }) => theme.colors.gray_900};
+        }
 
         ${StyledNavTop}{
             transform:rotate(45deg);

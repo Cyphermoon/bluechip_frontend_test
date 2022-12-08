@@ -4,12 +4,14 @@ import { StyledMobileNavBar } from '../styles/StyledMobileNavBar'
 import HamburgerIcon from './HamburgerIcon'
 import Logo from './Logo'
 
-const MobileNavBar = () => {
+const MobileNavBar = ({ navOpened, toggleNavOpened }) => {
     return (
         <StyledMobileNavBar>
             <CenterContainer>
                 <Logo title="Untitled Ui" />
-                <HamburgerIcon />
+                <HamburgerIcon
+                    navOpened={navOpened}
+                    toggleNavOpened={toggleNavOpened} />
             </CenterContainer>
         </StyledMobileNavBar>
     )

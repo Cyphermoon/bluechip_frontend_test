@@ -2,12 +2,37 @@ import styled from "styled-components";
 
 export const StyledSideBar = styled.aside`
     max-width: 362px;
-    width: 90%;
+    width: 50vh;
     display:flex;
     height: 100vh;
+    transition: transform 300ms linear;
+    transform-origin: left center;
+
+    &.mobile-opened{
+        transform: translateX(0);
+
+        &::after{
+            content: "";
+            width: 100vw;
+            height:100vh;
+            position: fixed;
+            z-index: -1;
+            top:0;
+            left:0;
+            background-color: rgba(0, 0, 0 , .1)
+        }
+    }
 
     @media screen and (max-width:${({ theme }) => theme.breakpoints.tablet}) {
-            display: none;
+        position: absolute;
+        transform: translateX(-100%);
+        display: flex;
+        position: absolute;
+        max-width: 362px;
+        width: 50vh;
+        top:0;
+        left:0;
+        z-index: 8;
     }
 `
 

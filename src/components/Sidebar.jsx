@@ -11,12 +11,22 @@ import { StyledSubMenu, StyledSubMenuFooter, StyledSubMenuHeader } from "../styl
 import Logo from "./Logo"
 import { Flex } from "../styles/util.style"
 import MobileNavBar from "./MobileNavBar"
+import { useState } from "react"
 
 const Sidebar = () => {
+  const [navOpened, setNavOpened] = useState(false);
+
+  const toggleNavOpened = () => {
+    setNavOpened(!navOpened)
+  }
+
   return (
     <>
-      <MobileNavBar />
-      <StyledSideBar>
+      <MobileNavBar
+        navOpened={navOpened}
+        toggleNavOpened={toggleNavOpened} />
+
+      <StyledSideBar className={` ${navOpened ? "mobile-opened" : ""}`}>
         <StyledNav>
           <Logo />
 

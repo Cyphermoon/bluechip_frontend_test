@@ -7,4 +7,8 @@ export const StyledMobileNavBar = styled.nav`
         display:flex;
         justify-content: space-between;
     }
+
+    @media screen and (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
+        display: none;
+    }
 `

@@ -1,10 +1,10 @@
 import { StyledIcon, StyledNavBottom, StyledNavMiddle, StyledNavTop } from "../styles/hamburger.style"
 
-const HamburgerIcon = ({ toggleNavDisplay, isOpen, dimension }) => {
+const HamburgerIcon = ({ toggleNavOpened, navOpened }) => {
     return (
         <StyledIcon
-            onClick={toggleNavDisplay}
-            className={isOpen && "opened"}>
+            onClick={toggleNavOpened}
+            className={navOpened && "opened"}>
             <StyledNavTop />
             <StyledNavMiddle />
             <StyledNavBottom />
