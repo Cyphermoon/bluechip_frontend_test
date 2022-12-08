@@ -13,7 +13,7 @@ const Card = ({ card_title, value, percentage_changed, up }) => {
             <h1>{value}</h1>
 
             <div className='card-footer'>
-                <div>
+                <div className='info'>
                     <span className={`percentage-changed ${up ? "success" : "failure"}`}>
                         {up ? <BsArrowUp /> : <BsArrowDown />}
                         {percentage_changed}
@@ -22,7 +22,10 @@ const Card = ({ card_title, value, percentage_changed, up }) => {
                     <span className='changed-duration'>vs last <br /> month</span>
                 </div>
 
-                {/* Charts */}
+                <div className='chart-wrapper'>
+                    {up ? <img src='/assets/success-chart.svg' alt="Success chart" /> :
+                        <img src='/assets/failure-chart.svg' alt="Failure Chart" />}
+                </div>
 
             </div>
         </StyledCard>

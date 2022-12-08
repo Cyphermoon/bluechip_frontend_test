@@ -17,11 +17,11 @@ export const StyledDashBoard = styled.main`
 export const StyledCard = styled.div`
     border-radius: ${({ theme }) => theme.radius.sm};
     border: 1px solid ${({ theme }) => theme.colors.gray_200};
-    padding: ${({ theme }) => theme.spacing.xxl};
+    padding: ${({ theme }) => theme.spacing.xl} ${({ theme }) => theme.spacing.lg};;
     box-shadow: 0px 1px 3px rgba(16, 24, 40, 0.1), 0px 1px 2px rgba(16, 24, 40, 0.06);
 
     & > * + *{
-        margin-top:${({ theme }) => theme.spacing.lg};
+        margin-top:${({ theme }) => theme.spacing.md};
     }
 
     ${Flex}{
@@ -41,7 +41,12 @@ export const StyledCard = styled.div`
         color: ${({ theme }) => theme.colors.gray_900};
     }
 
-    .card-footer > div{
+    .card-footer{
+        display:flex;
+        justify-content: space-between;
+    }
+
+    .card-footer > div.info{
         display:flex;
         align-items:center;
 
@@ -70,6 +75,12 @@ export const StyledCard = styled.div`
         }
     }
 
+    .card-footer > .chart-wrapper{
+        img{
+            cursor:pointer;
+        }
+    }
+
 `
 
 export const StyledCardList = styled.div`
@@ -82,7 +93,7 @@ export const StyledCardList = styled.div`
         justify-content: space-between;
 
         & > * {
-            width:32%;
+            width:33%;
         }
        
     }
