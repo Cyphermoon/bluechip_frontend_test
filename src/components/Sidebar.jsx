@@ -55,7 +55,6 @@ const Sidebar = () => {
 
           <small>tofunmisojimi@untitledui.com</small>
         </StyledSubMenuFooter>
-
       </StyledSubMenu>
     </StyledSideBar>
   )

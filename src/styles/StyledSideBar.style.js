@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledSideBar = styled.section`
+export const StyledSideBar = styled.aside`
     max-width: 362px;
     width: 90%;
     display:flex;
@@ -30,13 +30,15 @@ export const StyledInnerWrapper = styled.div`
 
         .nav-footer > img{
             border-top: 2px solid ${({ theme }) => theme.colors.primary_600};
-            padding-top: 1.75rem;
+            padding-top: ${({ theme }) => theme.spacing.xl} ;
             cursor:pointer;
-            :hover{
+
+            &:hover{
                 opacity:.85;
             }
         }
 
+        /* Adding a margin top to each element except the firs one */
         .nav-header > * + *,
         .nav-footer > ul > * + *,
         .nav-footer > * + *{
@@ -70,6 +72,7 @@ export const StyledSideBarIcon = styled.li`
         padding: ${({ theme }) => theme.spacing.sm} ${({ theme }) => theme.spacing.md};
         border-radius: ${({ theme }) => theme.radius.sm};
     }
+
 
     &.text-present{
         display: flex;

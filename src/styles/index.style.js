@@ -14,6 +14,7 @@ export const theme = {
     success_500: "#12B76A",
     success_700: "#027A48",
     gray_200: "#EAECF0",
+    gray_300: "#D0D5DD",
     gray_500: "#667085",
     gray_700: "#344054",
     gray_900: "#101828",
@@ -27,8 +28,8 @@ export const theme = {
   },
 
   typeScale: {
-    display_sm: "1.875rem",   /* 36px */
-    display_md: "2.25rem",    /* 30px */
+    display_sm: "1.875rem",   /* 30px */
+    display_md: "2.25rem",    /* 36px */
     text_md: "1rem",          /* 16px */
     text_sm: "0.875rem",      /* 14px */
     text_xs: "0.75rem",       /* 12px */
@@ -84,6 +85,11 @@ export const GlobalStyle = createGlobalStyle`
         list-style: none;
     }
 
+    button{
+      outline:none;
+      border:none;
+    }
+
     /*Typography*/
 
     h1{
@@ -96,6 +102,7 @@ export const GlobalStyle = createGlobalStyle`
       font-size:${theme.typeScale.display_sm};
       font-weight:500;
       line-height:1.2;
+      color:${theme.colors.gray_900}
     }
 
     p{
@@ -114,9 +121,10 @@ export const GlobalStyle = createGlobalStyle`
         font-size: 15px;
         font-family: 'Inter', sans-serif;
         line-height:1.5;
+        color: ${theme.colors.gray_500};
 
         @media screen and (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
-            font-size: 17px;
+            font-size: 16px;
         }
     }
 `;

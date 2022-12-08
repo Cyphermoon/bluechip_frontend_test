@@ -1,10 +1,13 @@
+import DashBoard from "./components/DashBoard";
 import Sidebar from "./components/Sidebar";
+import { StyledContainer } from "./styles/container.style";
 
 function App() {
   return (
-    <div className="App">
+    <StyledContainer>
       <Sidebar />
-    </div>
+      <DashBoard />
+    </StyledContainer>
   );
 }
 
