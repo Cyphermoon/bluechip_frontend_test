@@ -1,16 +1,19 @@
-import { StyledInnerWrapper, StyledNav, StyledSideBar, StyledSideBarIcon } from "../styles/StyledSideBar.style"
+// icons
 import { BiHomeAlt, BiLayer, BiLineChart } from "react-icons/bi"
 import { BsFlag } from "react-icons/bs"
-import { FiBarChart2, FiCheckSquare, FiCrosshair, FiLifeBuoy, FiUser, FiUsers } from "react-icons/fi"
+import { FiBarChart2, FiCheckSquare, FiLifeBuoy, FiLogOut, FiUser, FiUsers } from "react-icons/fi"
 import { CiSettings } from "react-icons/ci"
 
+//styles
+import { StyledInnerWrapper, StyledNav, StyledSideBar, StyledSideBarIcon } from "../styles/StyledSideBar.style"
+import { StyledSubMenu, StyledSubMenuFooter, StyledSubMenuHeader } from "../styles/StyledSubMenu"
+
 import Logo from "./Logo"
-import { StyledSubMenu, StyledSubMenuHeader } from "../styles/StyledSubMenu"
+import { Flex } from "../styles/util.style"
 
 const Sidebar = () => {
   return (
     <StyledSideBar>
-
       <StyledNav>
         <Logo />
 
@@ -44,6 +47,15 @@ const Sidebar = () => {
           </ul>
         </StyledSubMenuHeader>
 
+        <StyledSubMenuFooter>
+          <Flex align="flex-start">
+            <p>Tofunmi Sojimi</p>
+            <FiLogOut />
+          </Flex>
+
+          <small>tofunmisojimi@untitledui.com</small>
+        </StyledSubMenuFooter>
+
       </StyledSubMenu>
     </StyledSideBar>
   )
@@ -51,7 +63,7 @@ const Sidebar = () => {
 
 const SideBarIcon = ({ icon, text, active }) => {
   return (
-    <StyledSideBarIcon className={`${text && "text-present"} ${active && "active"}`} >
+    <StyledSideBarIcon className={`${text ? "text-present" : ""} ${active ? "active" : ""}`} >
       {icon}
       {text && <span>{text}</span>}
     </StyledSideBarIcon>
