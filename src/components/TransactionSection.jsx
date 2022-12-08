@@ -5,6 +5,7 @@ import { StyledFilter, StyledFilterOption, StyledSearchBar, StyledTransaction } 
 //icons
 import { BiCalendar, BiSearch } from 'react-icons/bi'
 import { BsFilter } from 'react-icons/bs'
+import TransactionTable from './TransactionTable'
 
 
 const TransactionSection = () => {
@@ -28,6 +29,7 @@ const TransactionSection = () => {
                     </StyledFilterOption>
                 </div>
             </StyledFilter>
+            <TransactionTable />
         </StyledTransaction>
     )
 }
