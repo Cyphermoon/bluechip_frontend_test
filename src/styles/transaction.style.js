@@ -1,7 +1,9 @@
 import styled from "styled-components";
 
 export const StyledTransaction = styled.section`
-
+    & > * + *{
+        margin-top:${({ theme }) => theme.spacing.xxxl};
+    }
 `
 
 export const StyledFilter = styled.div`
@@ -58,6 +60,12 @@ export const StyledFilterOption = styled.div`
     }
 `
 
+export const StyledTransactionFooter = styled.footer`
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+`
+
 export const StyledSearchBar = styled.form`
     display: flex;
     align-items: center;
@@ -93,5 +101,30 @@ export const StyledSearchBar = styled.form`
             font-size: ${({ theme }) => theme.typeScale.text_md};
             color: color: ${({ theme }) => theme.colors.gray_500};
         }
+    }
+`
+
+export const StyledPageNumbers = styled.div`
+
+    span{
+        display:inline-flex;
+        align-items:center;
+        justify-content:center;
+        font-size:${({ theme }) => theme.typeScale.text_sm};
+        font-weight:500;
+        color:${({ theme }) => theme.colors.gray_500};
+        padding:${({ theme }) => theme.spacing.md};
+        cursor:pointer;
+
+        &.active{
+            color:${({ theme }) => theme.colors.primary_600};
+            background-color:${({ theme }) => theme.colors.primary_50};
+            border-radius:${({ theme }) => theme.radius.sm};
+            padding:${({ theme }) => theme.spacing.md} ${({ theme }) => theme.spacing.xl};
+        }
+    }
+
+    & > * + *{
+        margin-left:${({ theme }) => theme.spacing.md};
     }
 `

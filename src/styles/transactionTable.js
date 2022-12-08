@@ -14,7 +14,7 @@ export const StyledTransactionTable = styled.table`
     }
 
     td,th{
-        padding:${({ theme }) => theme.spacing.lg} 0;
+        padding:${({ theme }) => theme.spacing.xl} 0;
         border-bottom:1px solid ${({ theme }) => theme.colors.gray_200};
     }
 
@@ -108,6 +108,12 @@ export const StyledExecutorProfile = styled.div`
     font-size:${({ theme }) => theme.typeScale.text_sm};
     font-weight:500;
     min-width:275px;
+
+    a{
+        font-size:${({ theme }) => theme.typeScale.text_sm};
+        font-weight:500;
+        color:${({ theme }) => theme.colors.primary_700};
+    }
 
     p{
       color:${({ theme }) => theme.colors.gray_900};

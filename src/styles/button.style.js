@@ -13,6 +13,7 @@ export const Button = styled.button`
     color: ${({ color }) => !color ? theme.colors.gray_700 : color};
     gap: ${({ theme }) => theme.spacing.sm};
     cursor:pointer;
+    box-shadow:0px 1px 2px rgba(16, 24, 40, 0.05);
 
     &:hover{
         opacity: 0.85;

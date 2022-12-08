@@ -26,6 +26,62 @@
             "name": "Phoenix Baker",
             "email": "phoenix@untitledui.com"
         }
+    },
+    {
+        "trade": {
+            "name": "DDOG BUY",
+            "desc": "Datadog Inc"
+        },
+        "order_amount": "$40,132.16",
+        "delivery_date": "Jan 13, 2022",
+        "status": "Success",
+        "executor": {
+            "image_url": "",
+            "name": "Lana Steiner",
+            "email": "lana@untitledui.com"
+        }
+    },
+    {
+        "trade": {
+            "name": "ARKG BUY",
+            "desc": "ARK Genomic Revolution ETF,"
+        },
+        "order_amount": "$22,665.12",
+        "delivery_date": "Jan 13, 2022",
+        "status": "Declined",
+        "executor": {
+            "image_url": "",
+            "name": "Demi Wilkinson",
+            "email": "demi@untitledui.com"
+        }
+    },
+    {
+        "trade": {
+            "name": "SQ BUY",
+            "desc": "Square, Inc."
+        },
+        "order_amount": "$18,221.30",
+        "delivery_date": "Jan 12, 2022",
+        "status": "Success",
+        "executor": {
+            "image_url": "/assets/girl2-avatar.png",
+            "name": "Candice Wu",
+            "email": "candice@untitledui.com"
+        }
+    },
+    {
+        "trade": {
+            "name": "MSTR SELL",
+            "desc": "MicroStrategy Inc."
+        },
+        "order_amount": "$24,118.18",
+        "delivery_date": "Jan 12, 2022",
+        "status": "Success",
+        "executor": {
+            "image_url": "",
+            "name": "Natali Craig",
+            "email": "natali@untitledui.com"
+        }
     }
     
 ]

@@ -130,7 +130,7 @@ export const GlobalStyle = createGlobalStyle`
         color: ${theme.colors.gray_500};
 
         @media screen and (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
-            font-size: 16px;
+            font-size: 15.1px;
         }
     }
 `;
