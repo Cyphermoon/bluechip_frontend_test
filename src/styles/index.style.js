@@ -13,6 +13,7 @@ export const theme = {
     error_700: "#B42318",
     success_500: "#12B76A",
     success_700: "#027A48",
+    gray_50: "#F9FAFB",
     gray_200: "#EAECF0",
     gray_300: "#D0D5DD",
     gray_400: "#98A2B3",
@@ -126,7 +127,7 @@ export const GlobalStyle = createGlobalStyle`
         color: ${theme.colors.gray_500};
 
         @media screen and (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
-            font-size: 16px;
+            font-size: 15px;
         }
     }
 `;
