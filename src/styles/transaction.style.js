@@ -50,6 +50,11 @@ export const StyledFilterOption = styled.div`
     color: ${({ theme }) => theme.colors.gray_700};
     box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
     cursor:pointer;
+    transition: border 300ms linear;
+
+    &:hover{
+        border: 1px solid ${({ theme }) => theme.colors.gray_700};
+    }
 
     svg{
         width:20px;
@@ -71,9 +76,9 @@ export const StyledFilterOption = styled.div`
 `
 
 export const StyledFilterOptions = styled.div`
-& > * + *{
-    margin-left:${({ theme }) => theme.spacing.md};
- }
+    & > * + *{
+        margin-left:${({ theme }) => theme.spacing.md};
+    }
 `
 
 
