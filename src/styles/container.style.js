@@ -10,8 +10,12 @@ export const StyledContainer = styled.div`
 `
 
 export const CenterContainer = styled.div`
-   width: 95%;
+   width: 92%;
    margin: 0 auto;
+
+   @media screen and (min-width:${({ theme }) => theme.breakpoints.tablet}) {
+    width:95%;
+}
 `
 
 

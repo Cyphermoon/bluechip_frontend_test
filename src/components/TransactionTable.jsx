@@ -1,20 +1,28 @@
 import React from 'react'
-import { BsArrowDown } from 'react-icons/bs'
 import { VscCircleLargeFilled } from 'react-icons/vsc'
 import { StyledCompanyDescription, StyledExecutorProfile, StyledStatusTag, StyledTableBody, StyledTableHeader, StyledTransactionTable } from '../styles/transactionTable'
 import transaction_list from "../transaction_list.json"
 import CheckBox from './CheckBox'
 import { Flex } from '../styles/util.style'
 import UserDefaultProfile from './UserDefaultProfile'
+import { BiDownArrowAlt } from 'react-icons/bi'
 
 const TransactionTable = () => {
     return (
         <StyledTransactionTable>
             <StyledTableHeader>
                 <tr>
-                    <th><CheckBox />Trade</th>
+                    <th>
+                        <Flex justify="flex-start">
+                            <CheckBox />Trade
+                        </Flex>
+                    </th>
                     <th>Order Amount</th>
-                    <th>Delivery date <BsArrowDown /> </th>
+                    <th>
+                        <Flex justify="flex-start">
+                            Delivery date <BiDownArrowAlt />
+                        </Flex>
+                    </th>
                     <th>Status</th>
                     <th>Executed By</th>
                 </tr>

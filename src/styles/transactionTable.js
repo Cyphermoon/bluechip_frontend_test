@@ -11,6 +11,10 @@ export const StyledTransactionTable = styled.table`
         font-size:${({ theme }) => theme.typeScale.text_xs};
         font-weight:500;
         color:${({ theme }) => theme.colors.gray_500};
+
+        svg{
+            margin-left:${({ theme }) => theme.spacing.xs}
+        }
     }
 
     td,th{
@@ -34,8 +38,6 @@ export const StyledTableHeader = styled.thead`
         font-size:${({ theme }) => theme.typeScale.text_xs};
         color:${({ theme }) => theme.colors.gray_500};
         font-weight:500;
-        display:inline-flex;
-        align-items:center;
 
         svg{
             width:10px;

@@ -55,6 +55,7 @@ export const StyledFilterOption = styled.div`
     display: inline-flex;
     color: ${({ theme }) => theme.colors.gray_700};
     box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+    cursor:pointer;
 
     svg{
         width:20px;

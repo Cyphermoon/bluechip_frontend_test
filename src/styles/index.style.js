@@ -37,7 +37,7 @@ export const theme = {
     display_md: "2.25rem",    /* 36px */
     text_md: "1rem",          /* 16px */
     text_sm: "0.875rem",      /* 14px */
-    text_xs: "0.75rem",       /* 12px */
+    text_xs: "0.778rem",       /* 12px */
   },
 
   radius: {
