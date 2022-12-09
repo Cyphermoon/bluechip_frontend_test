@@ -3,6 +3,11 @@ import styled from "styled-components";
 export const StyledContainer = styled.div`
     display: flex;
 
+    &.disable-scrolling{
+        height:100vh;
+        overflow-y:hidden;
+    }
+
     @media screen and (max-width:${({ theme }) => theme.breakpoints.tablet}) {
         flex-direction: column;
         padding:${({ theme }) => theme.spacing.lg} 0;

@@ -1,5 +1,6 @@
 import styled from "styled-components";
 
+
 export const StyledSideBar = styled.aside`
     max-width: 362px;
     width: 50vh;

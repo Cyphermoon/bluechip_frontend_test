@@ -18,7 +18,6 @@ export const StyledDashBoard = styled.main`
     }
 `
 
-
 export const StyledCard = styled.div`
     border-radius: ${({ theme }) => theme.radius.sm};
     border: 1px solid ${({ theme }) => theme.colors.gray_200};
@@ -44,6 +43,7 @@ export const StyledCard = styled.div`
         svg{
             color: ${({ theme }) => theme.colors.gray_400};
             font-size: ${({ theme }) => theme.typeScale.text_md};
+            cursor:pointer;
         }
     }
 

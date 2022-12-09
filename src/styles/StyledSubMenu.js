@@ -30,7 +30,6 @@ export const StyledSubMenuHeader = styled.div`
     }
 `
 
-
 export const StyledSubMenuFooter = styled.div`
     p{
         color: ${({ theme }) => theme.colors.white};

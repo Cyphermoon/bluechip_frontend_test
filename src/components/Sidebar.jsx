@@ -11,10 +11,9 @@ import { StyledSubMenu, StyledSubMenuFooter, StyledSubMenuHeader } from "../styl
 import Logo from "./Logo"
 import { Flex } from "../styles/util.style"
 import MobileNavBar from "./MobileNavBar"
-import { useState } from "react"
 
-const Sidebar = () => {
-  const [navOpened, setNavOpened] = useState(false);
+const Sidebar = ({ navOpened, setNavOpened }) => {
+
 
   const toggleNavOpened = () => {
     setNavOpened(!navOpened)
