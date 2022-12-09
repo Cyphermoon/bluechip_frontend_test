@@ -1,7 +1,7 @@
 import React from 'react'
 import { BiDownArrowAlt, BiUpArrowAlt } from 'react-icons/bi'
 import { BsThreeDotsVertical } from 'react-icons/bs'
-import { StyledCard } from '../styles/dashboard.style'
+import { StyledCard, StyledCardFooter } from '../styles/dashboard.style'
 import { Flex } from '../styles/util.style'
 
 const Card = ({ card_title, value, percentage_changed, up }) => {
@@ -11,9 +11,10 @@ const Card = ({ card_title, value, percentage_changed, up }) => {
                 <span>{card_title}</span>
                 <BsThreeDotsVertical />
             </Flex>
+
             <h1>{value}</h1>
 
-            <div className='card-footer'>
+            <StyledCardFooter >
                 <div className='info'>
                     <span className={`percentage-changed ${up ? "success" : "failure"}`}>
                         {up ? <BiDownArrowAlt /> : <BiUpArrowAlt />}
@@ -28,7 +29,7 @@ const Card = ({ card_title, value, percentage_changed, up }) => {
                         <img src='/assets/failure-chart.svg' alt="Failure Chart" />}
                 </div>
 
-            </div>
+            </StyledCardFooter>
         </StyledCard>
     )
 }

@@ -28,7 +28,6 @@ const TransactionTable = () => {
                 </tr>
             </StyledTableHeader>
 
-
             <StyledTableBody>
                 {transaction_list.map((transaction, idx) => {
                     return (
@@ -61,6 +60,7 @@ const TransactionTable = () => {
     )
 }
 
+
 const CompanyDescription = ({ name, desc }) => {
     return (
         <StyledCompanyDescription>
@@ -72,6 +72,7 @@ const CompanyDescription = ({ name, desc }) => {
         </StyledCompanyDescription>
     )
 }
+
 
 const StatusTag = ({ status }) => {
 
@@ -88,6 +89,7 @@ const StatusTag = ({ status }) => {
         </StyledStatusTag>
     )
 }
+
 
 const ExecutorProfile = ({ image_url, name, email }) => {
     return (

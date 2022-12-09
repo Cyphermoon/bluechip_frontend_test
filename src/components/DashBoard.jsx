@@ -20,7 +20,7 @@ const DashBoard = () => {
                         <p>Track, manage and forecast your customers and orders.</p>
                     </div>
 
-                    <div className='button-space'>
+                    <div className='button-group'>
                         <Button outline={true}>
                             <FiUploadCloud />
                             Import

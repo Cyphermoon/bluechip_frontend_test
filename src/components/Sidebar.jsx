@@ -14,7 +14,6 @@ import MobileNavBar from "./MobileNavBar"
 
 const Sidebar = ({ navOpened, setNavOpened }) => {
 
-
   const toggleNavOpened = () => {
     setNavOpened(!navOpened)
   }

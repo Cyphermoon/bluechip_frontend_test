@@ -24,12 +24,6 @@ export const StyledFilter = styled.div`
           margin-top:${({ theme }) => theme.spacing.md};
     }
   
-    .filter-options{
-        & > * + *{
-           margin-left:${({ theme }) => theme.spacing.md};
-        }
-   }
-
     @media screen and (min-width:${({ theme }) => theme.breakpoints.tablet}){
         justify-content:space-between;
         gap:unset;
@@ -75,6 +69,13 @@ export const StyledFilterOption = styled.div`
         }
     }
 `
+
+export const StyledFilterOptions = styled.div`
+& > * + *{
+    margin-left:${({ theme }) => theme.spacing.md};
+ }
+`
+
 
 export const StyledTransactionFooter = styled.footer`
     display:flex;

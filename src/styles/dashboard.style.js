@@ -51,13 +51,14 @@ export const StyledCard = styled.div`
         color: ${({ theme }) => theme.colors.gray_900};
         margin-top:${({ theme }) => theme.spacing.xl};
     }
+ 
+`
 
-    .card-footer{
-        display:flex;
-        justify-content: space-between;
-    }
+export const StyledCardFooter = styled.div`
+    display:flex;
+    justify-content: space-between;
 
-    .card-footer > div.info{
+    & > div.info{
         display:flex;
         align-items:center;
 
@@ -86,11 +87,12 @@ export const StyledCard = styled.div`
         }
     }
 
-    .card-footer > .chart-wrapper{
+    & > .chart-wrapper{
         img{
             cursor:pointer;
         }
     }
+
 
 `
 
@@ -111,6 +113,7 @@ export const StyledCardList = styled.div`
 
 `
 
+
 export const StyledHeader = styled.header`
     width: 100%;
     display: flex;
@@ -124,7 +127,7 @@ export const StyledHeader = styled.header`
         font-size: ${({ theme }) => theme.typeScale.text_md};
     }
 
-    .button-space > * + *{
+    .button-group > * + *{
         margin-left:${({ theme }) => theme.spacing.md}
     }
 

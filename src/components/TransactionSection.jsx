@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { StyledFilter, StyledFilterOption, StyledPageNumbers, StyledSearchBar, StyledTransaction, StyledTransactionFooter } from '../styles/transaction.style'
+import { StyledFilter, StyledFilterOption, StyledFilterOptions, StyledPageNumbers, StyledSearchBar, StyledTransaction, StyledTransactionFooter } from '../styles/transaction.style'
 
 //icons
 import { BiCalendar, BiLeftArrowAlt, BiRightArrowAlt, BiSearch } from 'react-icons/bi'
@@ -18,7 +18,7 @@ const TransactionSection = () => {
                     <input type="text" placeholder='Search for trades' />
                 </StyledSearchBar>
 
-                <div className='filter-options'>
+                <StyledFilterOptions>
                     <StyledFilterOption>
                         <BiCalendar />
                         <span>Jan 6, 2022 – Jan 13, 2022</span>
@@ -28,7 +28,7 @@ const TransactionSection = () => {
                         <BsFilter />
                         <span>Filter</span>
                     </StyledFilterOption>
-                </div>
+                </StyledFilterOptions>
             </StyledFilter>
 
             <div className='table-container'>
@@ -40,6 +40,7 @@ const TransactionSection = () => {
                     <BiLeftArrowAlt />
                     <span>Prev</span>
                 </Button>
+
                 <div className='pagination-wrapper'>
                     <StyledPageNumbers>
                         <span className='active'>1</span>
@@ -52,6 +53,7 @@ const TransactionSection = () => {
                     </StyledPageNumbers>
                     <p>Page 1 of 10</p>
                 </div>
+
                 <Button outline={true} collapse={true}>
                     <span>Next</span>
                     <BiRightArrowAlt />
