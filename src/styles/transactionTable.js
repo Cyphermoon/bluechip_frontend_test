@@ -13,7 +13,9 @@ export const StyledTransactionTable = styled.table`
         color:${({ theme }) => theme.colors.gray_500};
 
         svg{
-            margin-left:${({ theme }) => theme.spacing.xs}
+            margin-left:${({ theme }) => theme.spacing.xs};
+            width:13px;
+            height:13px
         }
     }
 
